@@ -1,0 +1,48 @@
+<body>
+
+  <header>
+    <h1>Casino en Ligne</h1>
+    <nav>
+      <ul>
+        <li><a href="#">Déconnexion</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="gamesChoice">
+    <div class="profile-info">
+      <h4 class="neon-text">🎲 Tokens : {{player.token}}</h4>
+      <h4 class="neon-text">👤 Mon profil : {{player.name}}</h4>
+    </div>
+
+    <div class="gamesBlock">
+      <div class="gameBlock">
+        <h3 class="neon-title">BlackJack</h3>
+        <p class="game-description">Vivez l'expérience du BlackJack et remportez gros !</p>
+        <img
+          src="assets/blackjack.png"
+          alt="image blackjack"
+          class="game-image"
+          (click)="onGameChoice('Blackjack')"
+          style="cursor: pointer;"
+        >
+      </div>
+    </div>
+  </div>
+
+  <div class="player-stats">
+    <h4 class="neon-text">Statistiques du Joueur</h4>
+    <ul>
+      <li>Parties Jouées : {{ stats.games_played }}</li>
+      <li>Parties Gagnées : {{ stats.games_won }}</li>
+      <li>Parties Perdues : {{ stats.games_lost }}</li>
+      <li>Gain total : {{ stats.total_tokens }}</li>
+      <li>Perte totale : {{ stats.total_bets }}</li>
+    </ul>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 Casino en Ligne. Tous droits réservés.</p>
+  </footer>
+</body>

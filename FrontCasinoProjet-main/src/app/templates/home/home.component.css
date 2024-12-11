@@ -1,0 +1,242 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+html, body {
+  height: 100%;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+
+body {
+  background: url('../../../../public/assets/home.avif') center/cover no-repeat, darkgreen;
+  color: #fff;
+  font-family: 'Arial', sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+/* Header */
+header {
+  background-color: #000;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5em;
+}
+
+header nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+header nav ul li {
+  font-size: 1.2em;
+}
+
+header nav ul li:last-child {
+  margin-left: auto;
+}
+
+header nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+  color: #f39c12;
+}
+
+/* Main content area */
+main {
+  flex: 1; /* Prendre tout l'espace disponible entre le header et le footer */
+  padding: 20px;
+}
+
+/* Footer */
+footer {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 10px 20px;
+  width: 100%;
+  box-sizing: border-box;
+  position: relative;
+  bottom: 0;
+}
+
+footer p {
+  margin: 0;
+}
+
+/* Exemple de jeux */
+.gamesChoice {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.profile-info {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.neon-text {
+  font-size: 20px;
+  color: #fff;
+  text-shadow: 0 0 5px #fff, 0 0 10px #f39c12, 0 0 20px #f39c12, 0 0 30px #e74c3c;
+}
+
+.gamesBlock {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.gameBlock {
+  background: linear-gradient(145deg, #333, #222);
+  padding: 20px;
+  border: 2px solid #f39c12;
+  border-radius: 15px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.gameBlock:hover {
+  transform: scale(1.05);
+}
+
+.neon-title {
+  font-size: 24px;
+  color: #f39c12;
+  text-shadow: 0 0 5px #fff, 0 0 10px #f39c12, 0 0 20px #e74c3c, 0 0 30px #e74c3c;
+  margin-bottom: 10px;
+}
+
+.game-description {
+  color: #aaa;
+  margin-bottom: 15px;
+}
+
+.game-image {
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  margin-bottom: 10px; /* Espacement entre l'image et le bouton */
+}
+
+.game-image:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px #e74c3c, 0 0 30px #e74c3c;
+}
+
+.casino-button {
+  background-color: #e74c3c;
+  color: #fff;
+  font-size: 18px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: box-shadow 0.3s;
+  margin-top: 10px; /* Espacement au-dessus du bouton */
+}
+
+.casino-button:hover {
+  box-shadow: 0 0 10px #f39c12, 0 0 20px #e74c3c;
+}
+
+.player-stats {
+  background: rgba(0, 0, 0, 0.8); /* Fond sombre semi-transparent */
+  border: 3px solid #FFD700; /* Bordure dorée */
+  border-radius: 15px; /* Coins arrondis */
+  padding: 20px 30px;
+  width: 80%;
+  max-width: 500px;
+  margin: 20px auto; /* Centré horizontalement */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); /* Ombre portée */
+  text-align: left;
+  animation: fadeIn 1s ease-out; /* Animation d'apparition */
+  color: #FFF; /* Texte blanc pour le contraste */
+}
+
+/* Animation d'apparition */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Titre */
+.player-stats h4 {
+  font-size: 1.8em;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #00FFFF; /* Couleur néon cyan */
+  text-shadow: 0 0 5px #00FFFF, 0 0 10px #00FFFF, 0 0 20px #00FFFF; /* Effet lumineux */
+  text-align: center;
+}
+
+/* Liste des statistiques */
+.player-stats ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.player-stats li {
+  font-size: 1.2em;
+  margin: 10px 0;
+  color: #FFF; /* Texte blanc */
+  background: linear-gradient(145deg, #333, #444); /* Fond légèrement texturé */
+  padding: 10px 15px;
+  border-radius: 10px; /* Coins arrondis */
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3); /* Ombre pour chaque élément */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+/* Emoji 📊 dans le titre */
+.player-stats h4::before {
+  content: '📊 ';
+  font-size: 1.5em;
+  vertical-align: middle;
+}
+
+.gamesChoice {
+  background: rgba(0, 0, 0, 0.85); /* Fond sombre semi-transparent */
+  border: 3px solid #FFD700; /* Bordure dorée pour un effet premium */
+  border-radius: 15px; /* Coins arrondis */
+  padding: 20px 30px;
+  width: 80%;
+  max-width: 500px;
+  margin: 20px auto; /* Centré horizontalement */
+  color: #FFF;
+  text-align: center;
+}

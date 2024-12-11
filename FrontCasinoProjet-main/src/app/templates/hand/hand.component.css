@@ -1,0 +1,22 @@
+.card-container {
+  position: relative;
+  width: 100%;   /* Largeur dynamique pour accueillir toutes les cartes */
+  height: 180px;  /* Hauteur du conteneur */
+  margin: auto;
+}
+
+.card {
+  position: absolute;
+  width: 100px;
+  height: 150px;
+  transition: transform 0.3s;
+}
+
+/* Les cartes seront décalées horizontalement en fonction de leur index */
+.card {
+  z-index: 1;
+}
+
+.card:nth-child(n) {
+  left: calc(30px * (n - 1)); /* Décale chaque carte de 30px en fonction de son index */
+}

@@ -1,0 +1,28 @@
+version: '3.1'
+services:
+  database:
+    container_name: api_database
+    image: postgres
+    restart: always
+    env_file:
+      - ./back-casino/.env
+    environment:
+      POSTGRES_USER: ${DATABASE_USER}
+      POSTGRES_PASSWORD: ${DATABASE_PASSWORD}
+      POSTGRES_DB: ${DATABASE_NAME}
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./back-casino/data:/var/lib/postgresql/data
+
+  front:
+    container_name: frontend_app
+    image: node:16
+    working_dir: /app
+    volumes:
+      - ./front:/app
+    ports:
+      - "3000:3000"
+    command: >
+      sh -c "npm install && npm start"
+
